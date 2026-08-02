@@ -1,0 +1,13 @@
+{
+  "name": "Warehouse Medical Supply Retrieval",
+  "version": "1.0",
+  "description": "Navigate a mobile robot through a cluttered warehouse to locate a medical supply cache.",
+  "robot": { "name": "Atlas-01", "x": 1, "y": 1, "battery": 100 },
+  "goal": { "x": 12, "y": 2 },
+  "successCriteria": [
+    "A collision-free route is generated",
+    "Every movement is approved by the safety gate",
+    "The robot reaches the target with battery remaining",
+    "The event trace records planning, movement, and perception events"
+  ]
+}

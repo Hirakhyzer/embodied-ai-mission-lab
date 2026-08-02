@@ -1,0 +1,19 @@
+name: Feature request
+description: Propose a mission, planner, safety, sensor, or adapter enhancement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: Problem or research need
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed capability
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Validation idea
+      description: Explain how we could demonstrate that the feature works.

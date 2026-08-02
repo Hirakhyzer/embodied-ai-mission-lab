@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Design, simulate, and inspect embodied AI robot missions in the browser.">
+  <title>Embodied AI Mission Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">E</span>
+      <span><strong>Embodied AI</strong><small>Mission Lab</small></span>
+    </a>
+    <nav>
+      <a href="#simulator">Simulator</a>
+      <a href="#architecture">Architecture</a>
+      <a href="https://github.com/Hirakhyzer" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+    <span class="release">v0.1 research preview</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">OPEN EMBODIED INTELLIGENCE PLATFORM</p>
+        <h1>Design robot missions.<br><span>Test the intelligence before the hardware.</span></h1>
+        <p class="lead">A browser-based laboratory for mission planning, sensor simulation, safety evaluation, and execution tracing across virtual robot environments.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#simulator">Launch simulation</a>
+          <a class="button ghost" href="docs/ARCHITECTURE.md">Read architecture</a>
+        </div>
+        <div class="hero-metrics">
+          <div><strong>4</strong><span>core subsystems</span></div>
+          <div><strong>0</strong><span>hardware required</span></div>
+          <div><strong>100%</strong><span>local execution</span></div>
+        </div>
+      </div>
+      <div class="system-orbit" aria-label="Platform components">
+        <div class="orbit core">MISSION<br>CORE</div>
+        <div class="orbit-node planner">Planner</div>
+        <div class="orbit-node sensing">Sensing</div>
+        <div class="orbit-node safety">Safety</div>
+        <div class="orbit-node execution">Executor</div>
+        <span class="ring ring-one"></span>
+        <span class="ring ring-two"></span>
+      </div>
+    </section>
+
+    <section class="lab" id="simulator">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LIVE LABORATORY</p>
+          <h2>Mission control center</h2>
+        </div>
+        <p>Choose a target or click any safe grid cell. Plan the route, inspect sensor readings, then execute step-by-step or autonomously.</p>
+      </div>
+
+      <div class="control-strip">
+        <label>Mission target
+          <select id="goal-select"></select>
+        </label>
+        <button id="plan-button">Plan route</button>
+        <button id="step-button">Run one step</button>
+        <button class="accent" id="run-button">Execute mission</button>
+        <button id="reset-button">Reset</button>
+        <button id="export-button">Export JSON</button>
+      </div>
+
+      <div class="dashboard">
+        <article class="world-card panel">
+          <div class="panel-title"><span>World model</span><span class="live-dot">● live</span></div>
+          <div class="canvas-shell"><canvas id="world"></canvas></div>
+          <div class="legend">
+            <span><i class="robot"></i>Robot</span>
+            <span><i class="obstacle"></i>Obstacle</span>
+            <span><i class="target"></i>Target</span>
+            <span><i class="path"></i>Planned path</span>
+          </div>
+        </article>
+
+        <aside class="side-stack">
+          <article class="panel telemetry">
+            <div class="panel-title"><span>Mission telemetry</span></div>
+            <div class="stats">
+              <div><span>Status</span><strong id="status-text">idle</strong></div>
+              <div><span>Battery</span><strong id="battery-text">100%</strong></div>
+              <div><span>Executed</span><strong id="steps-text">0</strong></div>
+              <div><span>Path left</span><strong id="path-text">0</strong></div>
+            </div>
+          </article>
+          <article class="panel sensors">
+            <div class="panel-title"><span>Range sensors</span><span>4 rays</span></div>
+            <div id="sensor-grid" class="sensor-grid"></div>
+          </article>
+        </aside>
+      </div>
+
+      <div class="lower-grid">
+        <article class="panel event-panel">
+          <div class="panel-title"><span>Explainable execution trace</span><span>newest first</span></div>
+          <ul id="event-list" class="events"></ul>
+        </article>
+        <article class="panel principles">
+          <div class="panel-title"><span>Design principles</span></div>
+          <ul>
+            <li><strong>Hardware-neutral</strong><span>Missions describe capabilities, not vendors.</span></li>
+            <li><strong>Safety before action</strong><span>Every movement passes through a safety decision.</span></li>
+            <li><strong>Observable</strong><span>Planning and execution create inspectable events.</span></li>
+            <li><strong>Extensible</strong><span>Sensors, planners, and robot adapters can become plugins.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="architecture" id="architecture">
+      <div class="section-heading">
+        <div><p class="eyebrow">PLATFORM VISION</p><h2>From browser simulator to embodied AI stack</h2></div>
+        <p>The first release proves the interfaces. Future releases add multi-robot coordination, real simulator bridges, learned planners, and hardware adapters.</p>
+      </div>
+      <div class="architecture-grid">
+        <article><span>01</span><h3>Mission Studio</h3><p>Visual goals, mission schemas, reusable scenarios, and experiment export.</p></article>
+        <article><span>02</span><h3>Intelligence Layer</h3><p>Symbolic planning today; LLM, VLM, and policy plugins on the roadmap.</p></article>
+        <article><span>03</span><h3>Safety Kernel</h3><p>Boundaries, obstacle avoidance, battery constraints, and future policy rules.</p></article>
+        <article><span>04</span><h3>Robot Bridge</h3><p>A future adapter surface for ROS 2, Webots, MuJoCo, Isaac Sim, and real robots.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Embodied AI Mission Lab</span><span>Open source · MIT licensed · Built for learning and research</span></footer>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

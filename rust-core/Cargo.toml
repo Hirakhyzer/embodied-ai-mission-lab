@@ -1,0 +1,13 @@
+[package]
+name = "mission-lab-core"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Hardware-neutral path planning and safety primitives for Embodied AI Mission Lab"
+repository = "https://github.com/Hirakhyzer/embodied-ai-mission-lab"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[lints.rust]
+unsafe_code = "forbid"

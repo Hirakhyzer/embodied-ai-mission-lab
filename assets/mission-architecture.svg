@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-label="Embodied AI mission architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .title{font:800 28px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .sub{font:500 14px Arial,Helvetica,sans-serif;fill:#475569}
+      .label{font:700 16px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .small{font:500 12.5px Arial,Helvetica,sans-serif;fill:#475569}
+      .arrow{stroke:#2563eb;stroke-width:3;marker-end:url(#arrow);fill:none}
+    </style>
+  </defs>
+
+  <rect width="1120" height="520" rx="28" fill="url(#bg)"/>
+  <text class="title" x="44" y="54">Embodied AI Mission Architecture</text>
+  <text class="sub" x="44" y="80">Transparent browser-based mission stack for planning, safety checking, sensing, execution, and audit review.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="132" width="160" height="94" rx="20" fill="#ffffff"/>
+    <text class="label" x="82" y="166">Mission Goal</text>
+    <text class="small" x="82" y="194">grid target, route,</text>
+    <text class="small" x="82" y="212">constraints</text>
+
+    <rect x="258" y="132" width="160" height="94" rx="20" fill="#ffffff"/>
+    <text class="label" x="288" y="166">A* Planner</text>
+    <text class="small" x="288" y="194">collision-free</text>
+    <text class="small" x="288" y="212">path search</text>
+
+    <rect x="462" y="132" width="160" height="94" rx="20" fill="#ffffff"/>
+    <text class="label" x="488" y="166">Safety Kernel</text>
+    <text class="small" x="488" y="194">boundaries, battery,</text>
+    <text class="small" x="488" y="212">obstacles</text>
+
+    <rect x="666" y="132" width="160" height="94" rx="20" fill="#ffffff"/>
+    <text class="label" x="696" y="166">Executor</text>
+    <text class="small" x="696" y="194">step or full</text>
+    <text class="small" x="696" y="212">mission run</text>
+
+    <rect x="870" y="132" width="196" height="94" rx="20" fill="#ffffff"/>
+    <text class="label" x="900" y="166">Virtual Robot</text>
+    <text class="small" x="900" y="194">state, battery,</text>
+    <text class="small" x="900" y="212">position</text>
+  </g>
+
+  <path class="arrow" d="M214 179 L258 179"/>
+  <path class="arrow" d="M418 179 L462 179"/>
+  <path class="arrow" d="M622 179 L666 179"/>
+  <path class="arrow" d="M826 179 L870 179"/>
+
+  <g filter="url(#shadow)">
+    <rect x="178" y="316" width="210" height="96" rx="20" fill="#ffffff"/>
+    <text class="label" x="212" y="352">Sensor Model</text>
+    <text class="small" x="212" y="380">range rays and</text>
+    <text class="small" x="212" y="398">target detection</text>
+
+    <rect x="456" y="316" width="210" height="96" rx="20" fill="#ffffff"/>
+    <text class="label" x="490" y="352">Event Trace</text>
+    <text class="small" x="490" y="380">planner, safety,</text>
+    <text class="small" x="490" y="398">perception events</text>
+
+    <rect x="734" y="316" width="210" height="96" rx="20" fill="#ffffff"/>
+    <text class="label" x="768" y="352">Mission Export</text>
+    <text class="small" x="768" y="380">JSON evidence</text>
+    <text class="small" x="768" y="398">for review</text>
+  </g>
+
+  <path class="arrow" d="M968 226 C930 288 720 292 666 344"/>
+  <path class="arrow" d="M666 364 L734 364"/>
+  <path class="arrow" d="M456 364 L388 364"/>
+
+  <rect x="82" y="454" width="956" height="34" rx="17" fill="#e0f2fe" stroke="#0891b2"/>
+  <text class="small" x="560" y="476" text-anchor="middle">Boundary: simulation and mission-design research only; physical robot deployment requires hardware-specific safety validation.</text>
+</svg>

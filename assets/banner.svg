@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Embodied AI Mission Lab banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="48%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="18%" cy="18%" r="72%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+    <style>
+      .title{font:800 48px Arial,Helvetica,sans-serif;fill:#f8fafc;letter-spacing:-.8px}
+      .sub{font:700 21px Arial,Helvetica,sans-serif;fill:#c4b5fd}
+      .body{font:500 15.5px Arial,Helvetica,sans-serif;fill:#dbeafe}
+      .chip{font:700 13px Arial,Helvetica,sans-serif;fill:#ecfeff}
+      .tiny{font:500 12px Arial,Helvetica,sans-serif;fill:#94a3b8}
+      .cardLabel{font:700 14px Arial,Helvetica,sans-serif;fill:#e0f2fe}
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#glow)"/>
+
+  <g opacity="0.14" stroke="#dbeafe" stroke-width="1.1" fill="none">
+    <path d="M64 88 C210 42 340 142 502 88 C662 34 810 104 954 146 C1056 176 1124 144 1160 112"/>
+    <path d="M72 270 C210 224 340 304 494 254 C656 202 820 246 954 286 C1048 314 1118 284 1164 236"/>
+    <path d="M120 70 L292 132 L476 84 L654 178 L844 94 L1064 168"/>
+  </g>
+
+  <g transform="translate(72 72)">
+    <text class="title" x="0" y="50">Embodied AI Mission Lab</text>
+    <text class="sub" x="0" y="90">Robot Mission Planning • Safety Kernel • Grid-World Simulation</text>
+    <text class="body" x="0" y="128">Browser-based research lab for planning, sensing, executing, and auditing robot missions before hardware deployment.</text>
+
+    <g transform="translate(0 168)">
+      <rect x="0" y="0" width="120" height="32" rx="16" fill="#2563eb" opacity="0.95"/>
+      <text class="chip" x="60" y="21" text-anchor="middle">A* Planner</text>
+      <rect x="138" y="0" width="132" height="32" rx="16" fill="#7c3aed" opacity="0.95"/>
+      <text class="chip" x="204" y="21" text-anchor="middle">Safety Gate</text>
+      <rect x="288" y="0" width="136" height="32" rx="16" fill="#0891b2" opacity="0.95"/>
+      <text class="chip" x="356" y="21" text-anchor="middle">Range Sensing</text>
+      <rect x="442" y="0" width="126" height="32" rx="16" fill="#0f766e" opacity="0.95"/>
+      <text class="chip" x="505" y="21" text-anchor="middle">Event Trace</text>
+    </g>
+
+    <text class="tiny" x="0" y="238">Research simulation scaffold only — hardware deployment requires validation, supervision, and robot-specific safety engineering.</text>
+  </g>
+
+  <g transform="translate(866 74)" filter="url(#shadow)">
+    <rect x="0" y="0" width="262" height="210" rx="28" fill="#020617" opacity="0.74" stroke="#334155"/>
+    <g transform="translate(42 36)">
+      <rect x="0" y="0" width="178" height="120" rx="18" fill="#0f172a" stroke="#475569"/>
+      <g stroke="#334155" stroke-width="1">
+        <path d="M36 0 V120M72 0 V120M108 0 V120M144 0 V120M0 30 H178M0 60 H178M0 90 H178"/>
+      </g>
+      <rect x="38" y="62" width="28" height="28" rx="8" fill="#38bdf8"/>
+      <circle cx="52" cy="76" r="5" fill="#020617"/>
+      <path d="M52 62 L52 44 L102 44 L102 30" stroke="#c4b5fd" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="102" cy="30" r="9" fill="#22c55e"/>
+      <rect x="112" y="76" width="28" height="28" rx="6" fill="#ef4444" opacity="0.85"/>
+    </g>
+    <text class="cardLabel" x="131" y="184" text-anchor="middle">Mission Simulation</text>
+  </g>
+</svg>
